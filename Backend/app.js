@@ -12,16 +12,27 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 app.get('/users',(req,res)=>{
-    Controller.getUsers(users=>{
-        res.send(users);
+    Controller.getUsers((req,res,next)=>{
+        res.send();
     })
 })
-app.get('/user',(req,res)=>{
+app.post('/createuser',(req,res)=>{
 
-    const id=req.query.id;
-    Controller.getUserById(id,user=>{
-        res.send(user);
-    })
+    Controller.addUser((req.body,(callback)=>{
+        res.send();
+    }))
+})
+app.post('/updateuser',(req,res)=>{
+
+    Controller.updateUser((req.body,(callback)=>{
+        res.send(callback);
+    }))
+})
+app.post('/deleteuser',(req,res)=>{
+
+    Controller.deleteUser((req.body,(callback)=>{
+        res.send(callback);
+    }))
 })
 
 
