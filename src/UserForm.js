@@ -22,28 +22,33 @@ const UserForm = ({addUser,updateUser,submitted,data,isEdit}) => {
   return (
     <Grid
       container
-      spacing={2}
       sx={{
         backgroundColor: "#ffffff",
-        marginBottom: "30px",
+        marginBottom: "100px",
         display: "block",
+        margin: 0, padding: 0,
+        width:'80%',
       }}
+      borderRadius='10px'
+      border='4px solid white'
+      
+      
     >
       <Grid item xs={12}>
-        <Typography component={"h1"} sx={{ color: "#000000" }}>
+        <Typography component={"h1"} sx={{ color: "#ffffff",backgroundColor: "#000000",width:'100%',height:"70px",fontSize:'40px',textAlign:'center',fontWeight:'900',marginBottom:'20px'}}>
           User Form
         </Typography>
       </Grid>
-      <Grid item xs={12} sm={6} sx={{ display: "flex" }}>
+      <Grid item xs={12} sm={12} sx={{ display: "flex",justifyContent:'center',alignItems:'center',marginBottom:'10px' }}>
         <Typography
           component={"label"}
           htmlFor="id"
           sx={{
             color: "#000000",
-            marginRight: "20px",
             fontSize: "16px",
             width: "100px",
             display: "block",
+            justifyContent:'center',alignItems:'center',
           }}
         >
           ID
@@ -52,21 +57,21 @@ const UserForm = ({addUser,updateUser,submitted,data,isEdit}) => {
           type="number"
           id="id"
           name="id"
-          sx={{ width: "400px" }}
+          sx={{ width: "100%" }}
           value={id}
           onChange={e => setId(e.target.value)}
         />
       </Grid>
-      <Grid item xs={12} sm={6} sx={{ display: "flex" }}>
+      <Grid item xs={12} sm={12} sx={{ display: "flex",justifyContent:'center',alignItems:'center'  }}>
         <Typography
           component={"label"}
           htmlFor="id"
           sx={{
             color: "#000000",
-            marginRight: "20px",
             fontSize: "16px",
             width: "100px",
             display: "block",
+            justifyContent:'center',alignItems:'center',
           }}
         >
           Name
@@ -75,7 +80,7 @@ const UserForm = ({addUser,updateUser,submitted,data,isEdit}) => {
           type="text"
           id="name"
           name="name"
-          sx={{ width: "400px" }}
+          sx={{ width: "100%" }}
           value={name}
           onChange={e => setName(e.target.value)}
         />
@@ -84,13 +89,21 @@ const UserForm = ({addUser,updateUser,submitted,data,isEdit}) => {
         sx={{
           margin: "auto",
           marginBottom: "20px",
-          backgroundColor: "#00c6e6",
+          backgroundColor: "#f39c12",
           color: "#000000",
-          marginLeft: "15px",
+          display:'flex',
+          alignItems:'center',
+          justifyContent:'center',
           marginTop: "20px",
+          padding:'10px',
+          paddingRight:'30px',
+          paddingLeft:'30px',
+          fontWeight:'800',
+          fontSize:'20px',
           '&:hover':{
-            opacity:'0.7',
-            backgroundColor:'#00c6e6'
+            // opacity:'0.7',
+            backgroundColor:'#804600 ',
+            color:'white'
           }
         }}
         onClick={()=>isEdit?updateUser({id,name}) :addUser({id,name})}

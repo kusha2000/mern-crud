@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome</h1>
-        <button className='users-button' onClick={()=> navigate('/users')}>Users</button>
+        <h1>Welcome to the Simple<span style={{ color: 'yellow' }}> MERN CRUD</span></h1>
+        <button className='users-button enterBtn' onClick={()=> navigate('/users')}>Users</button>
       </header>
     </div>
   );

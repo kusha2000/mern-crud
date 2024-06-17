@@ -71,17 +71,25 @@ const Users = () => {
   return (
     <Box 
     sx={{
-        width:'calc(100%-100px)',
-        margin:'auto',
-        marginTop:'100px',
-        marginLeft:'50px'
+      width: '50%',
+      margin: 'auto',
+      marginTop: '10px',
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      gap:"50px",
     }}>
-      <UserForm addUser={addUser} updateUser={updateUser} submitted={submitted} data={selectedUser} isEdit={isEdit}/>
+      <UserForm addUser={addUser} updateUser={updateUser} submitted={submitted} data={selectedUser} isEdit={isEdit} />
       <UsersTable rows={users} selectedUser={data=>{
         setselectedUser(data);
         setisEdit(true);
       }}
-      deleteUser={data=>window.confirm("Are you sure?" && deleteUser(data))}
+      deleteUser={data => {
+        if (window.confirm("Are you sure?")) {
+          deleteUser(data);
+        }
+      }}
       />
     </Box>
   );
