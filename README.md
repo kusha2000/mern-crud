@@ -2,25 +2,28 @@
 
 This is a simple CRUD (Create, Read, Update, Delete) application built with the MERN stack (MongoDB, Express.js, React, and Node.js). The application allows users to add, view, update, and delete user records with an ID and name. The front-end is styled using Material-UI for a clean and responsive user interface.
 
-Features
+<h3><u>Technologies Used</u></h3>
 <ul>
-<li>Add User: Enter a unique ID and name to add a new user to the database.</li>
-<li>View Users: Users are displayed in a table format, showing their ID and name.</li>
-<li>Update User: Edit user information directly from the table.</li>
-<li>Delete User: Remove a user from the database with a confirmation prompt.</li>
-<li>Responsive Design: Utilizes Material-UI to ensure a responsive and modern interface.</li>
+🔹 Front-End: React, Material-UI<br>
+🔹 Back-End: Node.js, Express.js<br>
+🔹 Database: MongoDB<br>
 </ul>
 
-Technologies Used
+
+<h3><u>Features Used</u></h3>
 <ul>
-<li>Front-End: React, Material-UI</li>
-<li>Back-End: Node.js, Express.js</li>
-<li>Database: MongoDB</li>
+✅ Add User: Enter a unique ID and name to add a new user to the database.<br>
+✅ View Users: Users are displayed in a table format, showing their ID and name.<br>
+✅ Update User: Edit user information directly from the table.<br>
+✅ Delete User: Remove a user from the database with a confirmation prompt.<br>
+✅ Responsive Design: Utilizes Material-UI to ensure a responsive and modern interface.<br>
 </ul>
+
 
 <h2>This is the Full Demo of the project</h2><br><br>
 
-![Demo](https://github.com/kusha2000/mern-crud/assets/127003267/eda8aca9-b8ca-4303-b40e-6ed7e785147b)
+
+https://github.com/user-attachments/assets/aeb8891b-bf96-45a1-99f7-a44db8a9f696
 
 
 <br><br>
